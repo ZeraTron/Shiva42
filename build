@@ -1,0 +1,55 @@
+#!/bin/sh
+# Define target directory
+if [ $# -eq 0 ] ; then
+	echo "No target directory supplied"
+	exit
+# Build
+elif [ $# > 1 ] ; then
+	pathname=$1
+	src=$(find $1/*.c | cut -c 6- | sed 's/.\{2\}$//')
+fi
+# Build & execute
+if [ ! -z "$2" ] ; then
+	if [ $2 == "run" ] ; then
+		execflag=1
+	fi
+fi
+# Create /obj/ if not existing
+if [ -d obj ] ; then
+	mkdir obj 2>&1 >/dev/null
+fi
+# Clean possibly existing binaries
+if [ -f runme ] ; then
+	clean 2>&1 >/dev/null
+fi
+# If main.c doesn't exist, generate it from template depending on ex N
+if [ ! -f main.c ] ; then
+	if [ $pathname == "ex00" ] ; then
+		ft_putchar
+	fi
+	if [ $pathname == "ex01" ] ; then
+		ft_print_alphabet
+	fi
+	if [ $pathname == "ex02" ] ; then
+		ft_print_reverse_alphabet
+	fi
+	if [ $pathname == "ex03" ] ; then
+		ft_print_numbers
+	fi
+	if [ $pathname == "ex04" ] ; then
+		ft_is_negative
+	fi
+	if [ $pathname == "ex05" ] ; then
+		ft_print_comb
+	fi
+	if [ $pathname == "ex06" ] ; then
+		ft_print_comb2
+	fi
+fi
+gcc -Wall -c $pathname/$src.c -o obj/$src.o
+gcc -Wall -c main.c -o obj/main.o 
+gcc -Wall -o runme obj/*.o
+if [ $execflag == 1 ] ; then
+	echo "$1 OUTPUT: ($src.c)"
+	./runme
+fi
