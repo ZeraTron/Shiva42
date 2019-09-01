@@ -1,0 +1,38 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <unistd.h>
+
+void	ft_ft(int *nbr);
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int n)
+{
+	unsigned int	nbr;
+
+	if (n < 0)
+	{
+		ft_putchar('-');
+		nbr = n * -1;
+	}
+	else
+		nbr = n;
+	if (nbr >= 10)
+		ft_putnbr(nbr / 10);
+	ft_putchar(nbr % 10 + 48);
+}
+
+int main(void)
+{
+	int a;
+	int *ptr;
+
+	a=2;
+	ptr=&a;
+	ft_ft(ptr);
+	ft_putnbr(*ptr);
+}
+EOF
