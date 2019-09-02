@@ -2,14 +2,14 @@
 cat <<'EOF' >main.c
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src);
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
 
 int	main(void)
 {
-	char init[]="Hello";
-	char blah[]="World";
+	char init[]="aaaaa";
+	char blah[]="bbbbb";
 	printf("init: %s | blah: %s\n", init, blah);
-	ft_strcpy(init, blah);
+	ft_strncpy(init, blah, 3);
 	printf("init: %s | blah: %s\n", init, blah);
 }
 EOF

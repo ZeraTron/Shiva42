@@ -3,7 +3,7 @@ if [ $1 == "ex00" ] ; then
 	ft_strcpy
 fi
 if [ $1 == "ex01" ] ; then
-	ft_
+	ft_strncpy
 fi
 if [ $1 == "ex02" ] ; then
 	ft_

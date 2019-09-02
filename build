@@ -6,7 +6,7 @@ if [ $# -eq 0 ] ; then
 # Build
 elif [ $# > 1 ] ; then
 	pathname=$1
-	project=$2
+	project=${PWD##*/}
 	src=$(find $1/*.c | cut -c 6- | sed 's/.\{2\}$//')
 fi
 # Clean possibly existing binaries
@@ -19,13 +19,13 @@ if [ ! -d "obj" ] ; then
 fi
 # If main.c doesn't exist, generate it from template depending on ex N
 if [ ! -f main.c ] ; then
-	if [ $project == "C00" ] ; then
+	if [[ $project = "C00" ]] ; then
 		C00_template $pathname
 	fi
-	if [ $project == "C01" ] ; then
+	if [[ $project = "C01" ]] ; then
 		C01_template $pathname
 	fi
-	if [ $project == "C02" ] ; then
+	if [[ $project = "C02" ]] ; then
 		C02_template $pathname
 	fi
 fi
@@ -33,6 +33,7 @@ gcc -Wall -Wextra -Werror -c $pathname/$src.c -o obj/$src.o
 gcc -Wall -Wextra -Werror -c main.c -o obj/main.o 
 gcc -Wall -Wextra -Werror -o _$src obj/*.o
 echo "$1 Built successfully !"
-echo "$1 SOURCE: $src.c"
-echo "$1 OUTPUT: "
+echo "=== SOURCE ==="
+echo "$src.c"
+echo "=== OUTPUT ==="
 ./_$src
