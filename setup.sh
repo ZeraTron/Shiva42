@@ -80,3 +80,4 @@ main() {
 	printf "$RESET"
 
 }
+main "$@"
