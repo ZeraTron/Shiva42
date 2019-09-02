@@ -62,20 +62,23 @@ main() {
 	setup_shiva
 
 	printf "$GREEN"
-	cat <<-'EOF'
-     ad88888ba   88           88                           
-    d8"     "8b  88           ""                           
-    Y8,          88                                        
-    `Y8aaaaa,    88,dPPYba,   88  8b       d8  ,adPPYYba,  
-      `"""""8b,  88P'    "8a  88  `8b     d8'  ""     `Y8  
-            `8b  88       88  88   `8b   d8'   ,adPPPPP88  
-    Y8a     a8P  88       88  88    `8b,d8'    88,    ,88  
-     "Y88888P"   88       88  88      "8"      `"8bbdP"Y8     ....is now installed!
-
-		Please look over the ~/.shiva/ folder to add templates.
-
-		Twitter: https://twitter.com/ZeraTron_
-		Intra: https://profile.intra.42.fr/users/kdubois
+	cat <<-"EOF"
+	.     ad88888ba   88           88    	\\\  A Clang compiling tool \\\
+	.    d8"     "8b  88           ""        \\\ for 42 school exrcices  \\\
+	.    Y8,          88                   
+	.    `Y8aaaaa,    88,dPPYba,   88  8b       d8  ,adPPYYba,  
+	.      `"""""8b,  88P'    "8a  88  `8b     d8'  ""     `Y8  
+	.            `8b  88       88  88   `8b   d8'   ,adPPPPP88  
+	.    Y8a     a8P  88       88  88    `8b,d8'    88,    ,88  
+	.     "Y88888P"   88       88  88      "8"      `"8bbdP"Y8     ....is now installed!
+	.
+	EOF
+	printf "$YELLOW"
+	cat <<-EOF
+	.    Please look over the ~/.shiva/templates/ folder to add templates.$BLUE
+	.
+	.    Twitter: https://twitter.com/ZeraTron_
+	.    Intra: https://profile.intra.42.fr/users/kdubois
 	EOF
 	printf "$RESET"
 
