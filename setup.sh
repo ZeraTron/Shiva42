@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 # Default settings
 SHIVA=${SHIVA:-~/.shiva}
 REPO=${REPO:-ZeraTron/Shiva42}
