@@ -40,8 +40,8 @@ setup_shiva() {
 		error "git is not installed"
 		exit 1
 	}
-	git clone --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
-			error "git clone of oh-my-zsh repo failed"
+	git clone --depth=1 --branch "$BRANCH" "$REMOTE" "$SHIVA" || {
+			error "git clone of Shiva repo failed"
 			exit 1
 		}
 
