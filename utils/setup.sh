@@ -39,9 +39,8 @@ setup_color() {
 }
 
 install_all() {
-	echo "${BLUE}Adding path to your .zshrc file...${RESET}"
+	echo "${GREEN}Adding path to your .zshrc file...${RESET}"
 	
-
 cat <<EOF >> ~/.zshrc
 
 # SHIVA 42
@@ -103,6 +102,5 @@ main() {
 	.    Intra: https://profile.intra.42.fr/users/kdubois
 	EOF
 	printf "$RESET"
-
 }
 main "$@"
