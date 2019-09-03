@@ -20,13 +20,13 @@ fi
 # If main.c doesn't exist, generate it from template depending on ex N
 if [ ! -f main.c ] ; then
 	if [[ $project = "C00" ]] ; then
-		${SHIVA_ROUTERS}/C00_template $pathname
+		~/.shiva/routers/C00_template $pathname
 	fi
 	if [[ $project = "C01" ]] ; then
-		${SHIVA_ROUTERS}/C01_template $pathname
+		~/.shiva/routers/C01_template $pathname
 	fi
 	if [[ $project = "C02" ]] ; then
-		${SHIVA_ROUTERS}/C02_template $pathname
+		~/.shiva/routers/C02_template $pathname
 	fi
 fi
 gcc -Wall -Wextra -Werror -c $pathname/$src.c -o obj/$src.o
