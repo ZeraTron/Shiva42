@@ -81,6 +81,7 @@ main() {
 	fi
 
 	setup_shiva
+	install_all
 
 	printf "$BLUE"
 	cat <<-"EOF"
