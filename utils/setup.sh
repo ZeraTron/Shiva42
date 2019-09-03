@@ -5,6 +5,11 @@ SHIVA=${SHIVA:-~/.shiva}
 REPO=${REPO:-ZeraTron/Shiva42}
 REMOTE=${REMOTE:-https://github.com/${REPO}.git}
 BRANCH=${BRANCH:-master}
+# Directories paths
+UTILS=${UTILS:-utils}
+TOOLS=${TOOLS:-tools}
+ROUTERS=${ROUTERS:-routers}
+TEMPLATES=${TEMPLATES:-templates}
 
 command_exists() {
 	command -v "$@" >/dev/null 2>&1
@@ -31,6 +36,22 @@ setup_color() {
 		BOLD=""
 		RESET=""
 	fi
+}
+
+install_all() {
+	echo "${BLUE}Adding path to your .zshrc file...${RESET}"
+	
+
+cat <<EOF >> ~/.zshrc
+
+# SHIVA 42
+SHIVA_UTILS=${SHIVA}/${UTILS}
+SHIVA_TOOLS=${SHIVA}/${TOOLS}
+SHIVA_ROUTERS=${SHIVA}/${ROUTERS}
+SHIVA_TEMPLATES=${SHIVA}/${TEMPLATES}
+
+PATH=$PATH:${SHIVA_UTILS}:${SHIVA_TOOLS}
+EOF
 }
 
 setup_shiva() {
@@ -61,10 +82,10 @@ main() {
 
 	setup_shiva
 
-	printf "$GREEN"
+	printf "$BLUE"
 	cat <<-"EOF"
 	.     ad88888ba   88           88    	\\\  A Clang compiling tool \\\
-	.    d8"     "8b  88           ""        \\\ for 42 school exrcices  \\\
+	.    d8"     "8b  88           ""        \\\ for 42 school exercices \\\
 	.    Y8,          88                   
 	.    `Y8aaaaa,    88,dPPYba,   88  8b       d8  ,adPPYYba,  
 	.      `"""""8b,  88P'    "8a  88  `8b     d8'  ""     `Y8  

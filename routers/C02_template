@@ -1,28 +1,28 @@
 #!/bin/sh
 if [ $1 == "ex00" ] ; then
-	ft_ft
+	${SHIVA_TEMPLATES}/ft_strcpy
 fi
 if [ $1 == "ex01" ] ; then
-	ft_ultimate_ft
+	${SHIVA_TEMPLATES}/ft_strncpy
 fi
 if [ $1 == "ex02" ] ; then
-	ft_swap
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex03" ] ; then
-	ft_print_numbers
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex04" ] ; then
-	ft_is_negative
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex05" ] ; then
-	ft_print_comb
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex06" ] ; then
-	ft_print_comb2
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex07" ] ; then
-	ft_putnbr
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex08" ] ; then
-	ft_print_combn
+	${SHIVA_TEMPLATES}/ft_
 fi
