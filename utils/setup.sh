@@ -65,7 +65,8 @@ setup_shiva() {
 			error "git clone of Shiva repo failed"
 			exit 1
 		}
-
+	
+	install_all
 	echo
 }
 
@@ -81,7 +82,6 @@ main() {
 	fi
 
 	setup_shiva
-	install_all
 
 	printf "$BLUE"
 	cat <<-"EOF"

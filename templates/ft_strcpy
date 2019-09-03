@@ -6,8 +6,8 @@ char	*ft_strcpy(char *dest, char *src);
 
 int	main(void)
 {
-	char init[]="Hello";
-	char blah[]="World";
+	char init[]="aa";
+	char blah[]="dddddddddd";
 	printf("init: %s | blah: %s\n", init, blah);
 	ft_strcpy(init, blah);
 	printf("init: %s | blah: %s\n", init, blah);
