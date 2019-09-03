@@ -1,0 +1,13 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+int ft_str_is_alpha(char *str)
+
+int	main(void)
+{
+	char init[]="aaaaa";
+	char blah[]="bbbb bdz";
+	char poo[]="bbbb&é"'(bdz";
+	printf(ft_str_is_alpha(init));
+EOF
