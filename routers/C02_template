@@ -1,28 +1,28 @@
 #!/bin/sh
 if [ $1 == "ex00" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_strcpy
+	${SHIVA_TEMPLATES}/ft_strcpy
 fi
 if [ $1 == "ex01" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_strncpy
+	${SHIVA_TEMPLATES}/ft_strncpy
 fi
 if [ $1 == "ex02" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex03" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex04" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex05" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex06" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex07" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_
+	${SHIVA_TEMPLATES}/ft_
 fi
 if [ $1 == "ex08" ] ; then
-	${SHIVA}/${TEMPLATES}/ft_
+	${SHIVA_TEMPLATES}/ft_
 fi
