@@ -16,7 +16,7 @@ It only requires **git** & **curl** to install.
 
 Copy & paste this in your terminal and you're good to go !
 ```sh
-~$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ZeraTron/Shiva42/master/utils/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ZeraTron/Shiva42/master/utils/setup.sh)"
 ```
 ***
 ### Setup
@@ -25,10 +25,10 @@ Shiva42 require some specific files pattern to run.
 
 | Module folder | ex folder | 
 | ------ | ------ |
-| C00 |  |
-| C01 |  |
-| C02 |  |
-| C03 |  |
+| C00 | ex00 - ex08 |
+| C01 | ex00 - ex08 |
+| C02 | ex00 - ex12 |
+| C03 | ex00 - ex05 |
 ***
 ### Development
 
