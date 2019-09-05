@@ -2,19 +2,19 @@
 cat <<'EOF' >main.c
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b);
+void	ft_ultimate_div_mod(int *a, int *b);
 
 int	main(void)
 {
-	int a = 111222;
-	int b = 333444;
+	int a = 500;
+	int b = 15;
 	int *alpha;
 	int *beta;
 
 	alpha=&a;
 	beta=&b;
 	printf("alpha: %d | beta: %d\n", *alpha, *beta);
-	ft_swap(alpha, beta);
+	ft_ultimate_div_mod(alpha, beta);
 	printf("alpha: %d | beta: %d\n", *alpha, *beta);
 }
 EOF

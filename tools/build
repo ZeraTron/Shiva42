@@ -28,6 +28,9 @@ if [ ! -f main.c ] ; then
 	if [[ $project = "C02" ]] ; then
 		~/.shiva/routers/C02_template $pathname
 	fi
+	if [[ $project = "C03" ]] ; then
+		~/.shiva/routers/C03_template $pathname
+	fi
 fi
 gcc -Wall -Wextra -Werror -c $pathname/$src.c -o obj/$src.o
 gcc -Wall -Wextra -Werror -c main.c -o obj/main.o 

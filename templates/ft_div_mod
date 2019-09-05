@@ -1,0 +1,51 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <unistd.h>
+
+void	ft_div_mod(int a, int b, int *div, int *mod);
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int n)
+{
+	unsigned int	nbr;
+
+	if (n < 0)
+	{
+		ft_putchar('-');
+		nbr = n * -1;
+	}
+	else
+		nbr = n;
+	if (nbr >= 10)
+		ft_putnbr(nbr / 10);
+	ft_putchar(nbr % 10 + 48);
+}
+
+int	main(void)
+{
+	int a;
+	int b;
+	int aaa;
+	int bbb;
+	int *alpha;
+	int *beta;
+
+	a=88;
+	b=6;
+	alpha=&aaa;
+	beta=&bbb;
+	ft_putnbr(a);
+	ft_putchar('\n');
+	ft_putnbr(b);
+	ft_putchar('\n');
+	ft_div_mod(a, b, alpha, beta);
+	ft_putnbr(*alpha);
+	ft_putchar('\n');
+	ft_putnbr(*beta);
+	ft_putchar('\n');
+}
+EOF

@@ -1,0 +1,39 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+void	ft_sort_int_tab(int *tab, int size);
+
+void	ft_print_array_ptr(int *arr, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i <= size - 1)
+	{
+		printf("arr[%d]: %d | ", i, arr[i]);
+		++i;
+	}
+	printf("\n");
+}
+
+int	main(void)
+{
+	int table[10];
+
+	table[0] = 100;
+	table[1] = 30;
+	table[2] = 80;
+	table[3] = 20;
+	table[4] = 70;
+	table[5] = 60;
+	table[6] = 90;
+	table[7] = 10;
+	table[8] = 40;
+	table[9] = 50;
+
+	ft_print_array_ptr(table, 10);
+	ft_sort_int_tab(table, 10);
+	ft_print_array_ptr(table, 10);
+}
+EOF

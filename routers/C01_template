@@ -9,20 +9,20 @@ if [ $1 == "ex02" ] ; then
 	~/.shiva/templates/ft_swap
 fi
 if [ $1 == "ex03" ] ; then
-	~/.shiva/templates/ft_print_numbers
+	~/.shiva/templates/ft_div_mod
 fi
 if [ $1 == "ex04" ] ; then
-	~/.shiva/templates/ft_is_negative
+	~/.shiva/templates/ft_ultimate_div_mod
 fi
 if [ $1 == "ex05" ] ; then
-	~/.shiva/templates/ft_print_comb
+	~/.shiva/templates/ft_putstr
 fi
 if [ $1 == "ex06" ] ; then
-	~/.shiva/templates/ft_print_comb2
+	~/.shiva/templates/ft_strlen
 fi
 if [ $1 == "ex07" ] ; then
-	~/.shiva/templates/ft_putnbr
+	~/.shiva/templates/ft_rev_int_table
 fi
 if [ $1 == "ex08" ] ; then
-	~/.shiva/templates/ft_print_combn
+	~/.shiva/templates/ft_sort_int_table
 fi

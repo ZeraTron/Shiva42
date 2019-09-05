@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ $1 == "ex00" ] ; then
-	~/.shiva/templates/ft_strcpy
+	~/.shiva/templates/ft_strcmp
 fi
 if [ $1 == "ex01" ] ; then
 	~/.shiva/templates/ft_strncpy

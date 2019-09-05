@@ -1,0 +1,20 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+int ft_str_is_numeric(char *str);
+
+int	main(void)
+{
+	char	alpha[] = "abcdefghijklmnopqrstuvwxyz";
+	char	num[] = "123456789";
+	char	empty[] = "";
+	char	other[] = "skskdjjv44";
+	int	al = ft_str_is_numeric(alpha);
+	int	nu = ft_str_is_numeric(num);
+	int	em = ft_str_is_numeric(empty);
+	int	ot = ft_str_is_numeric(other);
+
+	printf("alpha: %d | num: %d | empty: %d | other: %d\n", al, nu, em, ot);
+}
+EOF

@@ -1,0 +1,15 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size);
+
+int	main(void)
+{
+	char init[]="aaa";
+	char blah[]="bbbccc";
+	printf("init: %s | blah: %s\n", init, blah);
+	ft_strlcpy(init, blah, 5);
+	printf("init: %s | blah: %s\n", init, blah);
+}
+EOF

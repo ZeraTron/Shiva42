@@ -1,0 +1,35 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <unistd.h>
+
+int	ft_strlen(char *str);
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int n)
+{
+	unsigned int	nbr;
+
+	if (n < 0)
+	{
+		ft_putchar('-');
+		nbr = n * -1;
+	}
+	else
+		nbr = n;
+	if (nbr >= 10)
+		ft_putnbr(nbr / 10);
+	ft_putchar(nbr % 10 + 48);
+}
+
+int	main(void)
+{
+	int res;
+
+	res = ft_strlen("Hello world !");
+	ft_putnbr(res);
+}
+EOF

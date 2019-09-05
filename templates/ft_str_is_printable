@@ -1,0 +1,20 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+int ft_str_is_printable(char *str);
+
+int	main(void)
+{
+	char	lower[] = "abcdefghijklmnopqrstuvwxyz";
+	char	upper[] = {65, 66, 67, 68};
+	char	empty[] = "";
+	char	other[] = {12, 46, 67, 32, 97, 122, 234};
+	int	lo = ft_str_is_printable(lower);
+	int	up = ft_str_is_printable(upper);
+	int	em = ft_str_is_printable(empty);
+	int	ot = ft_str_is_printable(other);
+
+	printf("lower: %d | upper: %d | empty: %d | other: %d\n", lo, up, em, ot);
+}
+EOF

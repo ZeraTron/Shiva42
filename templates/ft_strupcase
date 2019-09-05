@@ -1,0 +1,21 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+char	*ft_strupcase(char *str);
+
+int	main(void)
+{
+	char	lower[] = "abcd";
+	char	upper[] = "ABCD";
+	char	empty[] = "";
+	char	other[] = "sksLDdjjv44";
+
+	ft_strupcase(lower);
+	ft_strupcase(upper);
+	ft_strupcase(empty);
+	ft_strupcase(other);
+
+	printf("lower: %s | upper: %s | empty: %s | other: %s\n", lower, upper, empty, other);
+}
+EOF

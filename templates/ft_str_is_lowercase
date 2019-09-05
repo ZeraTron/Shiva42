@@ -2,18 +2,18 @@
 cat <<'EOF' >main.c
 #include <stdio.h>
 
-int ft_str_is_alpha(char *str);
+int ft_str_is_lowercase(char *str);
 
 int	main(void)
 {
 	char	lower[] = "abcdefghijklmnopqrstuvwxyz";
 	char	upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char	empty[] = "";
-	char	other[] = "skskdjjv44";
-	int	lo = ft_str_is_alpha(lower);
-	int	up = ft_str_is_alpha(upper);
-	int	em = ft_str_is_alpha(empty);
-	int	ot = ft_str_is_alpha(other);
+	char	other[] = "sksLDdjjv44";
+	int	lo = ft_str_is_lowercase(lower);
+	int	up = ft_str_is_lowercase(upper);
+	int	em = ft_str_is_lowercase(empty);
+	int	ot = ft_str_is_lowercase(other);
 
 	printf("lower: %d | upper: %d | empty: %d | other: %d\n", lo, up, em, ot);
 }

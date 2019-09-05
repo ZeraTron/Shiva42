@@ -1,0 +1,14 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+char	*ft_strcapitalize(char *str);
+
+int	main(void)
+{
+	char	sentence[] = "bonjour je suis Kylian et je suis un homme";
+	printf("sentence: %s\n", sentence);
+	ft_strcapitalize(sentence);
+	printf("sentence: %s\n", sentence);
+}
+EOF
