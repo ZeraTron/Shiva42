@@ -1,0 +1,40 @@
+#!/bin/sh
+if [ $1 == "ex00" ] ; then
+	~/.shiva/templates/ft_strcmp
+fi
+if [ $1 == "ex01" ] ; then
+	~/.shiva/templates/ft_strncmp
+fi
+if [ $1 == "ex02" ] ; then
+	~/.shiva/templates/ft_str_is_alpha
+fi
+if [ $1 == "ex03" ] ; then
+	~/.shiva/templates/ft_str_is_numeric
+fi
+if [ $1 == "ex04" ] ; then
+	~/.shiva/templates/ft_str_is_lowercase
+fi
+if [ $1 == "ex05" ] ; then
+	~/.shiva/templates/ft_str_is_uppercase
+fi
+if [ $1 == "ex06" ] ; then
+	~/.shiva/templates/ft_str_is_printable
+fi
+if [ $1 == "ex07" ] ; then
+	~/.shiva/templates/ft_strupcase
+fi
+if [ $1 == "ex08" ] ; then
+	~/.shiva/templates/ft_strlowcase
+fi
+if [ $1 == "ex09" ] ; then
+	~/.shiva/templates/ft_strcapitalize
+fi
+if [ $1 == "ex10" ] ; then
+	~/.shiva/templates/ft_strlcpy
+fi
+if [ $1 == "ex11" ] ; then
+	~/.shiva/templates/ft_putstr_non_printable
+fi
+if [ $1 == "ex12" ] ; then
+	~/.shiva/templates/ft_print_memory
+fi

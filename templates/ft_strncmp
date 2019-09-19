@@ -1,0 +1,17 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+#include <stdio.h>
+
+int ft_strncmp(char *s1, char *s2, unsigned int n);
+
+int	main(void)
+{
+	char s1[]="aaaaaa";
+	char s2[]="aabbbb";
+	printf("s1: %s | s2: %s\n", s1, s2);
+	int res = ft_strncmp(s1, s2, 2);
+	printf("res: %d\n", res);
+	res = ft_strncmp(s1, s2, 4);
+	printf("res: %d\n", res);
+}
+EOF

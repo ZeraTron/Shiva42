@@ -1,4 +1,39 @@
 #!/bin/sh
+function build()
+{
+	gcc -Wall -Wextra -Werror -c $pathname/$src.c -o obj/$src.o
+	gcc -Wall -Wextra -Werror -c main.c -o obj/main.o 
+	gcc -Wall -Wextra -Werror -o _$src obj/*.o
+}
+
+function gen_main()
+{
+	# If main.c doesn't exist, generate it from template depending on ex N
+	if [ ! -f main.c ] ; then
+		if [[ $project = "C00" ]] ; then
+			~/.shiva/templates/C00/C00_template $pathname
+		fi
+		if [[ $project = "C01" ]] ; then
+			~/.shiva/templates/C01/C01_template $pathname
+		fi
+		if [[ $project = "C02" ]] ; then
+			~/.shiva/templates/C02/C02_template $pathname
+		fi
+		if [[ $project = "C03" ]] ; then
+			~/.shiva/templates/C03/C03_template $pathname
+		fi
+	fi
+}
+
+function output()
+{
+	echo "$1 Built successfully !"
+	echo "=== SOURCE ==="
+	echo "$src.c"
+	echo "=== OUTPUT ==="
+	./_$src
+}
+
 # Define target directory
 if [ $# -eq 0 ] ; then
 	echo "No target directory supplied"
@@ -17,26 +52,12 @@ fi
 if [ ! -d "obj" ] ; then
 	mkdir obj 2>/dev/null
 fi
-# If main.c doesn't exist, generate it from template depending on ex N
-if [ ! -f main.c ] ; then
-	if [[ $project = "C00" ]] ; then
-		~/.shiva/routers/C00_template $pathname
-	fi
-	if [[ $project = "C01" ]] ; then
-		~/.shiva/routers/C01_template $pathname
-	fi
-	if [[ $project = "C02" ]] ; then
-		~/.shiva/routers/C02_template $pathname
-	fi
-	if [[ $project = "C03" ]] ; then
-		~/.shiva/routers/C03_template $pathname
-	fi
+# If building C06, directly build the source file without adding a main
+if [[ $project = "C06" ]] ; then
+	gcc -Wall -Wextra -Werror -c $pathname/$src.c -o obj/$src.o
+	gcc -Wall -Wextra -Werror -o _$src obj/*.o
+else
+	gen_main build
 fi
-gcc -Wall -Wextra -Werror -c $pathname/$src.c -o obj/$src.o
-gcc -Wall -Wextra -Werror -c main.c -o obj/main.o 
-gcc -Wall -Wextra -Werror -o _$src obj/*.o
-echo "$1 Built successfully !"
-echo "=== SOURCE ==="
-echo "$src.c"
-echo "=== OUTPUT ==="
-./_$src
+
+output

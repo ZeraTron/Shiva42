@@ -1,0 +1,28 @@
+#!/bin/sh
+if [ $1 == "ex00" ] ; then
+	~/.shiva/templates/C00/ft_putchar
+fi
+if [ $1 == "ex01" ] ; then
+	~/.shiva/templates/C00/ft_print_alphabet
+fi
+if [ $1 == "ex02" ] ; then
+	~/.shiva/templates/C00/ft_print_reverse_alphabet
+fi
+if [ $1 == "ex03" ] ; then
+	~/.shiva/templates/C00/ft_print_numbers
+fi
+if [ $1 == "ex04" ] ; then
+	~/.shiva/templates/C00/ft_is_negative
+fi
+if [ $1 == "ex05" ] ; then
+	~/.shiva/templates/C00/ft_print_comb
+fi
+if [ $1 == "ex06" ] ; then
+	~/.shiva/templates/C00/ft_print_comb2
+fi
+if [ $1 == "ex07" ] ; then
+	~/.shiva/templates/C00/ft_putnbr
+fi
+if [ $1 == "ex08" ] ; then
+	~/.shiva/templates/C00/ft_print_combn
+fi

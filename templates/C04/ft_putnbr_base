@@ -1,0 +1,16 @@
+#!/bin/sh
+cat <<'EOF' >main.c
+void	ft_putnbr_base(int nbr, char *base);
+
+int	main(void)
+{
+	ft_putnbr_base(145778, "0123456789");
+	printf("\n");
+	ft_putnbr_base(145778, "01");
+	printf("\n");
+	ft_putnbr_base(145778, "0123456789ABCDEF");
+	printf("\n");
+	ft_putnbr_base(145778, "poneyvif");
+	return (0);
+}
+EOF
